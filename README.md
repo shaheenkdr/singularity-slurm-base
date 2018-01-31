@@ -5,8 +5,9 @@ Run Slurm commands inside a Singularity container that will execute against the 
 ```
 singularity image.create slurm-base.img
 singularity build slurm-base.img Singularity
-singularity shell --cleanenv --bind /home/slurm --bind /var/run/munge --bind /etc/slurm slurm-base.img
+singularity shell --cleanenv --bind /var/lib/sss/pipes --bind /home/slurm --bind /var/run/munge --bind /etc/slurm slurm-base.img
 ```
 
 ## Notes
-* Users not in the image's `/etc/passwd` file will be resolved as nobody when running Slurm commands.
+* SSSD is now installed in the container, so the behavior of the host nsswitch will be maintained.
+* For multiuser services, it may be necessary to mount /home.

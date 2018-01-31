@@ -10,7 +10,7 @@ From: centos:7
    yum -y update
    yum -y install epel-release
    yum -y groupinstall 'Development Tools'
-   yum -y install wget strace iproute munge munge-devel pam-devel openssl openssl-devel readline-devel perl-devel
+   yum -y install sssd wget strace iproute munge munge-devel pam-devel openssl openssl-devel readline-devel perl-devel
    cd ~ && wget https://download.schedmd.com/slurm/slurm-17.02.9.tar.bz2
    rpmbuild -ta slurm-17.02.9.tar.bz2
    cd ~/rpmbuild/RPMS/x86_64
