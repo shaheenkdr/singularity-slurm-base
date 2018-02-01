@@ -1,3 +1,5 @@
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/534)
+
 # singularity-slurm-base
 Run Slurm commands inside a Singularity container that will execute against the host Slurm deployment.
 
